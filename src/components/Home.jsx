@@ -8,7 +8,8 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
-  const { isLoggedIn, logout } = useAuth();
+  const { user, logout } = useAuth();
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -86,7 +87,7 @@ const Home = () => {
 
   return (
     <>
-      {isLoggedIn ? (
+      {user ? (
         <div className="bg-gray-900">
           <div className="relative h-100vw">
             <video
@@ -321,9 +322,9 @@ const Home = () => {
             </div>
           </div>
         </div>
-      ) : (
-        navigate("/signin")
-      )}
+     ) : (
+        navigate("/login")
+      )} 
     </>
   );
 };

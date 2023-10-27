@@ -24,7 +24,7 @@ const Landing = () => {
           <button className="bg-black text-white px-2 py-1">English</button>
           <button
             className="bg-red-600 text-white px-2 py-1"
-            onClick={() => navigate("/signin")}
+            onClick={() => navigate("/login ")}
           >
             Sign In
           </button>
