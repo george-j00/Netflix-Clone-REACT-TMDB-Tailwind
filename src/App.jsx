@@ -2,9 +2,9 @@ import "./App.css";
 import Home from "./components/Home";
 import Landing from "./components/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Signin from "./components/signin";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { useAuth } from "./context/AuthContext";
+import Signin from "./components/Signin";
 
 function App() {
   const { user } = useAuth();
