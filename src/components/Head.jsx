@@ -16,9 +16,13 @@ const Head = () => {
     } 
     getRandomFunction()
   }, [])
+
+  const { isLoggedIn } = useAuth()
+
   
   return (
     <>
+
       <div className="relative h-100vw">
         <video
           className="overflow-hidden w-full overflow-y-hidden"

@@ -8,8 +8,9 @@ const Signin = () => {
   const [password, setPassword] = useState("");
   const { setIsLoggedIn, error, setError, login, googleLogin ,user } = useAuth();
 
+  setIsLoggedIn(true);
+  
   const navigate = useNavigate();
-
 
   //Sign in with google
   const handleGoogleSubmit = async (e) => {
